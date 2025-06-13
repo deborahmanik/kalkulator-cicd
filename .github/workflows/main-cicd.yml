@@ -39,6 +39,9 @@ jobs:
           key: ${{ runner.os }}-sonar
           restore-keys: ${{ runner.os }}-sonar
 
+      - name: 🧾 Tampilkan Struktur Direktori
+        run: ls -R
+
       - name: 🧐 Analisis SonarCloud (Continuous Inspection)
         uses: SonarSource/sonarqube-scan-action@v1
         env:
