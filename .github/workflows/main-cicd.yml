@@ -49,11 +49,10 @@ node-version: '18' # atau versi LTS terbaru
 # run: echo "Tidak ada langkah build spesifik."
 
 - name: 🧪 Jalankan Tes Unit (Continuous Testing)
-run: |
+  run: |
+    echo "Menjalankan tes unit kalkulator..."
+    node tests/calculator.test.js
 
-echo "Menjalankan tes unit kalkulator..."
-
-node tests/calculator.test.js
 
 
 - name: ☕ Setup JDK 17 untuk SonarQube
