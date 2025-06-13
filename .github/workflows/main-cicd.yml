@@ -40,9 +40,8 @@ jobs:
           restore-keys: ${{ runner.os }}-sonar
 
       - name: 🧐 Analisis SonarCloud (Continuous Inspection)
-        uses: SonarSource/sonarcloud-github-action@master
+        uses: SonarSource/sonarqube-scan-action@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           projectBaseDir: .
@@ -51,6 +50,7 @@ jobs:
             -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
             -Dsonar.sources=.
             -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }}
+
 
   build-docker-image:
     name: 🐳 Build Docker Image
