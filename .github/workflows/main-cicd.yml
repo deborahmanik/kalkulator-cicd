@@ -49,7 +49,7 @@ node-version: '18' # atau versi LTS terbaru
 # run: echo "Tidak ada langkah build spesifik."
 
 
-#- name: 🧪 Jalankan Tes Unit (Continuous Testing)
+- name: 🧪 Jalankan Tes Unit (Continuous Testing)
 
 run: |
 
